@@ -37,6 +37,14 @@ public class PedirNota {
 		return b_suspenso;
 	}
 	
+	private static boolean notaAprobada(int n)
+	{
+		/**
+		 * Este método es equivalente a aprobado.
+		 */
+		return(n >= 5);
+	}
+	
 	public static boolean aprobado(int nota)
 	{
 		boolean b_aprobado = false;
