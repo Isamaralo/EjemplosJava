@@ -1,11 +1,23 @@
 package edu.femxa.val;
 
 public class Cadena {
-	public static void main(String[] args) {
+	public static void main(String[] argumentos) {
 		
-		System.out.println("Palabra 1 = " +args[0]);
-		System.out.println("Palabra 2 = " +args[1]);
-		System.out.println("Palabra 3 = " +args[2]);
+				
+//		System.out.println("Palabra 1 = " +argumentos[0]);
+//		System.out.println("Palabra 2 = " +argumentos[1]);
+//		System.out.println("Palabra 3 = " +argumentos[2]);
+//		
+//		int n_palabras = argumentos.length;
+//		System.out.println(n_palabras);
+		
+		//Recorrer un array de palabras
+		int posicion_inicial = 0;
+		int posicion_final = argumentos.length;
+		
+		for (int i = posicion_inicial; i < posicion_final; i++) {
+			System.out.println("La palabra " +i +"es" +argumentos[i]);
+		}
 		
 	}
 
