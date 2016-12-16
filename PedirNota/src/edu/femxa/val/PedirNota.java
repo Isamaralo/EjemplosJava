@@ -47,6 +47,31 @@ public class PedirNota {
 		return b_aprobado;
 	}
 	
+	private static void imprimeNotaAlfabetica(int notaNumerica)
+	{
+		switch (notaNumerica) {
+		case 10:
+			System.out.println("MATRÍCULA DE HONOR");
+			break;
+		case 9:
+			System.out.println("SOBRESALIENTE");
+			break;
+		case 8:
+		case 7:
+			System.out.println("NOTABLE");
+			break;
+		case 6:
+			System.out.println("BIEN");
+			break;
+		case 5:
+			System.out.println("SUFICIENTE");
+			break;
+			
+		default:
+			System.out.println("INSUFICIENTE");
+		}
+	}
+	
 	public static void main(String[] args) {
 		
 		int nota_introducida = 0;
@@ -55,12 +80,16 @@ public class PedirNota {
 		{
 			System.out.println("Dame nota: ");
 			nota_introducida = pedirNota();
+			imprimeNotaAlfabetica(nota_introducida);
 			
 		}
 		/*while (suspenso(nota_introducida));*/
 		while (!aprobado(nota_introducida));
 		
-		System.out.println("Aprobaste. Enhorabuena!!");
+		//System.out.println("Aprobaste. Enhorabuena!!");
+
+		
+		
 		
 	}
 
