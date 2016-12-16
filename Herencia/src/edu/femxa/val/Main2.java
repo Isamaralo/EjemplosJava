@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main2 {
 
 	
-	public static final int NUMERO_ALUMNOS = 3;
+	public static final int NUMERO_PERSONAS = 3;
 	
 	public static String pedirNombre(){
 		String nombrePedido = null;
@@ -34,8 +34,7 @@ public class Main2 {
 		int edadMayor = 0;
 		Persona personaMayor = new Persona();
 
-		Persona p = new Persona();
-		for(int i=0; i < NUMERO_ALUMNOS; i++ ){
+		for(int i=0; i < NUMERO_PERSONAS; i++ ){
 			
 			System.out.print("Introduzca su nombre: ");
 			nombre = pedirNombre();
@@ -48,13 +47,8 @@ public class Main2 {
 				personaMayor.setNombre(nombre);
 				personaMayor.setEdad(edad);
 			}
-			else{
-				p.setNombre(nombre);
-				p.setEdad(edad);
-			}
-			System.out.println();
+			
 		}	
 		System.out.println("El alumno de mayor edad es: " +personaMayor.getNombre());
-		
 	}
 }
