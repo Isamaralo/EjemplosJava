@@ -2,7 +2,7 @@ package edu.femxa.val;
 
 import java.util.Scanner;
 
-public class Main2 {
+public class PedirPersonasPorTeclado2 {
 
 	
 	public static final int NUMERO_PERSONAS = 3;

@@ -2,7 +2,7 @@ package edu.femxa.val;
 
 import java.util.Scanner;
 
-public class Main {
+public class NumerosPares {
 	
 	public static int pedirNumero()
 	{

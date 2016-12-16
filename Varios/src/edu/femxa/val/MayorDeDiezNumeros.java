@@ -2,7 +2,7 @@ package edu.femxa.val;
 
 import java.util.Scanner;
 
-public class Principal {
+public class MayorDeDiezNumeros {
 	
 	/**
 	 * Pido un número al usuario.

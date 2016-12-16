@@ -2,7 +2,7 @@ package edu.femxa.val;
 
 import java.util.Scanner;
 
-public class Principal {
+public class CalcularIMC {
 	
 	/**
 	 * Pido un número de tipo Double por teclado al usuario.
