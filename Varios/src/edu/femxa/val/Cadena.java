@@ -18,7 +18,7 @@ public class Cadena {
 		
 		for (int i = posicion_inicial; i < posicion_final; i++) {
 			palabra_actual = argumentos[i];
-			System.out.println("La palabra " +i +"es" +palabra_actual);
+			System.out.println("La palabra " +i +" es " +palabra_actual);
 		}
 		
 	}
