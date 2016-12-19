@@ -2,6 +2,7 @@ package edu.femxa.val;
 
 import java.util.Scanner;
 
+
 public class PedirPersonasPorTeclado2 {
 
 	
