@@ -86,7 +86,7 @@ public class CalcularIMC {
 		System.out.println("Introduzca el peso (en Kg con coma, ej: 53,9): ");
 		peso = pedirNumeroFloat();
 		
-		System.out.println("Introduzca la estatura (en m, ej: 1,67): ");
+		System.out.println("Introduzca la estatura (en m con coma, ej: 1,67): ");
 		altura = pedirNumeroFloat();
 	   
 		imc = calcularIMC(peso, altura);
