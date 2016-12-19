@@ -97,8 +97,6 @@ public class PedirNota {
 		//System.out.println("Aprobaste. Enhorabuena!!");
 
 		
-		
-		
 	}
 
 }

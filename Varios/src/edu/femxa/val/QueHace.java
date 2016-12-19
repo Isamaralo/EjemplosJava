@@ -22,6 +22,7 @@ public class QueHace {
         qh1.a = 33; 
         qh1.metodo(); 
         System.out.println(qh1.a); 
+        qh2 = qh1; //Al asignar qh1 a qh2 hace que apunten al mismo espacio de memoria.
         qh2.metodo(); 
  
     } 
