@@ -81,6 +81,7 @@ public class PalabrasYLetras {
 //			System.out.println(palabra.charAt(lim_sup));
 //			lim_sup--;
 //		}
+		
 	}
 	
 	public static int vecesQueEstaLaLetra(String palabra, char letra)
