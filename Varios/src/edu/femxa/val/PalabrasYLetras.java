@@ -27,18 +27,32 @@ public class PalabrasYLetras {
 			System.out.println(palabra.charAt(i));
 		}
 	}
+	public static void mostrarLetrasPalabraHastaEncontrarLetra (String palabra, char letra)
+	{
+		int i = 0;
+		boolean letraEncontrada = false;
+		do
+		{
+			System.out.println(palabra.charAt(i));
+			if(letra == palabra.charAt(i))
+			    letraEncontrada = true;
+			i++;
+		}
+		while((i < palabra.length()) && (!letraEncontrada));
+	}
 	
 	public static void main(String[] args) {
 		
 		String palabra = "HOLA";
-		char letra = 'A';
+		char letra = 'L';
 		
 //		if(letraEstaEnPalabra(palabra,letra))
 //			System.out.println("La letra " +letra +" está en la palabra " +palabra);
 //		else
 //			System.out.println("La letra " +letra +" NO está en la palabra " +palabra);
 		
-		mostrarPalabraLetraALetra(palabra);
+		//mostrarPalabraLetraALetra(palabra);
+		mostrarLetrasPalabraHastaEncontrarLetra(palabra, letra);
 		
 	}
 
