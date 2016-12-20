@@ -55,11 +55,21 @@ public class PalabrasYLetras {
 	
 	public static void nUltimosNumerosDeLaCadena (String palabra, int n)
 	{
+		//int contador = 0;
 		
-		for(int i = palabra.length()-1; i >= n; i--)
+		if(n < palabra.length())
 		{
-			System.out.println(palabra.charAt(i));
+			for(int i = palabra.length()-1; i >= palabra.length()-n; i--)
+			{
+				//if(contador < n)
+				//{
+					System.out.println(palabra.charAt(i));
+				//}
+				//contador++;
+			}
 		}
+		else
+			System.out.println("La palabra no tiene tantas letras.");
 	}
 	
 	public static int vecesQueEstaLaLetra(String palabra, char letra)
@@ -72,15 +82,22 @@ public class PalabrasYLetras {
 					contadorLetraEncontrada++;
 			}
 		return contadorLetraEncontrada;
-		
+	}
+	
+	public static void palabraInvertida(String palabra)
+	{
+		for(int i = palabra.length()-1; i >= 0; i--)
+		{
+			System.out.println(palabra.charAt(i));
+		}
 	}
 	
 	public static void main(String[] args) {
 		
 		String palabra = "HOLA";
 		char letra = 'L';
-		int numero = 2;
-		int veces = 0;
+		int numero = 3;
+		int numVeces = 0;
 		
 //		if(letraEstaEnPalabra(palabra,letra))
 //			System.out.println("La letra " +letra +" está en la palabra " +palabra);
@@ -94,10 +111,12 @@ public class PalabrasYLetras {
 		//mostrarLetrasPalabraHastaEncontrarLetra(palabra, letra);
 		
 		//nPrimerosNumerosDeLaCadena(palabra, numero);
-		//nUltimosNumerosDeLaCadena(palabra, numero);
+		nUltimosNumerosDeLaCadena(palabra, numero);
 		
-		veces = vecesQueEstaLaLetra(palabra, letra);
-		System.out.println("La letra está " +veces +" veces.");
+//		numVeces = vecesQueEstaLaLetra(palabra, letra);
+//		System.out.println("La letra está " +numVeces +" veces.");
+		
+		//palabraInvertida(palabra);
 		
 	}
 
