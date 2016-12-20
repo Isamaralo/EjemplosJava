@@ -27,6 +27,7 @@ public class PalabrasYLetras {
 			System.out.println(palabra.charAt(i));
 		}
 	}
+	
 	public static void mostrarLetrasPalabraHastaEncontrarLetra (String palabra, char letra)
 	{
 		int i = 0;
@@ -41,10 +42,21 @@ public class PalabrasYLetras {
 		while((i < palabra.length()) && (!letraEncontrada));
 	}
 	
+	public static void nPrimerosNumerosDeLaCadena (String palabra, int n)
+	{
+		int i = 0;
+		while((i < n) && i<palabra.length())
+		{
+			System.out.println(palabra.charAt(i));
+			i++;
+		}
+	}
+	
 	public static void main(String[] args) {
 		
 		String palabra = "HOLA";
 		char letra = 'L';
+		int numero = 3;
 		
 //		if(letraEstaEnPalabra(palabra,letra))
 //			System.out.println("La letra " +letra +" está en la palabra " +palabra);
@@ -52,7 +64,8 @@ public class PalabrasYLetras {
 //			System.out.println("La letra " +letra +" NO está en la palabra " +palabra);
 		
 		//mostrarPalabraLetraALetra(palabra);
-		mostrarLetrasPalabraHastaEncontrarLetra(palabra, letra);
+		//mostrarLetrasPalabraHastaEncontrarLetra(palabra, letra);
+		nPrimerosNumerosDeLaCadena(palabra, numero);
 		
 	}
 
