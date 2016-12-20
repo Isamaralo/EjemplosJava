@@ -70,6 +70,17 @@ public class PalabrasYLetras {
 		}
 		else
 			System.out.println("La palabra no tiene tantas letras.");
+		
+		//CON WHILE 
+//		 
+//		int lim_sup = palabra.length()-1;
+//		int lim_inf = palabra.length()-n;
+//		
+//		while(lim_sup >= lim_inf)
+//		{
+//			System.out.println(palabra.charAt(lim_sup));
+//			lim_sup--;
+//		}
 	}
 	
 	public static int vecesQueEstaLaLetra(String palabra, char letra)
