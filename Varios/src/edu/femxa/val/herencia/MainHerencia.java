@@ -8,6 +8,7 @@ public class MainHerencia {
 		
 		alumno.setNombre("Nira");
 		alumno.setEdad(26);
+		alumno.setNota(5);
 		
 		alumno.mostrarPersona();
 		System.out.println("HASHCODE: " +alumno.hashCode());
