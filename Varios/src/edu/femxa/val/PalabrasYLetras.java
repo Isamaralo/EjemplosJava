@@ -105,6 +105,7 @@ public class PalabrasYLetras {
 		{
 				palabraAlReves += palabra.charAt(i);
 		}
+		
 		System.out.println(palabraAlReves);
 	}
 	
