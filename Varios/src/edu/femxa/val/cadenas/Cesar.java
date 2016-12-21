@@ -44,6 +44,8 @@ public class Cesar {
 				numero_carac += k;
 				char_traducido = (char) numero_carac;
 			}
+			else
+				char_traducido = c;
 			
 		return char_traducido;
 	}
