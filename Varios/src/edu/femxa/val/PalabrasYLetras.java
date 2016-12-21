@@ -98,10 +98,14 @@ public class PalabrasYLetras {
 	
 	public static void palabraInvertida(String palabra)
 	{
+		String palabraAlReves = null;
+		palabraAlReves = new String();
+		
 		for(int i = palabra.length()-1; i >= 0; i--)
 		{
-			System.out.println(palabra.charAt(i));
+				palabraAlReves += palabra.charAt(i);
 		}
+		System.out.println(palabraAlReves);
 	}
 	
 	public static void main(String[] args) {
@@ -123,12 +127,12 @@ public class PalabrasYLetras {
 		//mostrarLetrasPalabraHastaEncontrarLetra(palabra, letra);
 		
 		//nPrimerosNumerosDeLaCadena(palabra, numero);
-		nUltimosNumerosDeLaCadena(palabra, numero);
+		//nUltimosNumerosDeLaCadena(palabra, numero);
 		
 //		numVeces = vecesQueEstaLaLetra(palabra, letra);
 //		System.out.println("La letra está " +numVeces +" veces.");
 		
-		//palabraInvertida(palabra);
+		palabraInvertida(palabra);
 		
 	}
 
