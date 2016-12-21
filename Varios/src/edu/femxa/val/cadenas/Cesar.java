@@ -20,24 +20,32 @@ public class Cesar {
 	{
 		String cad_cifrada = new String();
 			int longi = cadena.length();
-			int numero_carac = 0;
 			char caracter = 0;
+			char caracter_cifrado = 0;
 			
 			for (int i = 0; i < longi; i++) {
 				
 				caracter = cadena.charAt(i);
-				
-				if(caracter != ' ')
-				{
-					numero_carac = (int) caracter;			
-					numero_carac += clave;
-					caracter = (char) numero_carac;
-				}
-				
-				cad_cifrada += caracter;			
+				caracter_cifrado = traduceCharCesar(caracter, clave);
+				cad_cifrada += caracter_cifrado;			
 			}
 		
 		return cad_cifrada;		
+	}
+	
+	public static char traduceCharCesar (char c, int k)
+	{
+		char char_traducido = 0;
+			int numero_carac = 0;	
+
+			if(c != ' ')
+			{
+				numero_carac = (int) c;
+				numero_carac += k;
+				char_traducido = (char) numero_carac;
+			}
+			
+		return char_traducido;
 	}
 	
 	public static void main(String[] args) {
