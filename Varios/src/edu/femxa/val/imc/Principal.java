@@ -9,7 +9,7 @@ public class Principal {
 		Persona persona = new Persona(peso, altura);
 		double imc = IMC.calcula(persona);
 		TipoIMC tipo = TipoIMC.traduceIMC(imc);
-		persona.setImc(tipo);
+		persona.setImc(tipo); 
 		EntradaSalida.mostrarIMC(imc, tipo);
 	}
 
