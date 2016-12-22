@@ -28,9 +28,9 @@ public class EntradaSalida {
 		return altura;
 	}
 	
-	public static void mostrarIMC (double imc)
+	public static void mostrarIMC (double imc, TipoIMC tipo)
 	{
-		System.out.println("Su IMC es: " + imc);
+		System.out.println("Su IMC es: " + imc + " que es " + tipo);
 	}
 
 }

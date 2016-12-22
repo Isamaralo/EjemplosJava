@@ -4,6 +4,8 @@ public class Persona {
 	
 	private double peso;
 	private double altura;
+	private TipoIMC imc;
+	
 	
 	public Persona(double peso, double altura) {
 		super();
@@ -21,6 +23,12 @@ public class Persona {
 	}
 	public void setAltura(double altura) {
 		this.altura = altura;
+	}
+	public TipoIMC getImc() {
+		return imc;
+	}
+	public void setImc(TipoIMC imc) {
+		this.imc = imc;
 	}
 	
 	
