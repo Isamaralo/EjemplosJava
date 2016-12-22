@@ -99,7 +99,6 @@ public class PalabrasYLetras {
 	public static void palabraInvertida(String palabra)
 	{
 		String palabraAlReves = null;
-		palabraAlReves = new String();
 		
 		for(int i = palabra.length()-1; i >= 0; i--)
 		{
