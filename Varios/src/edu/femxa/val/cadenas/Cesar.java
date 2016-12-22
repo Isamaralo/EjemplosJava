@@ -2,6 +2,11 @@ package edu.femxa.val.cadenas;
 
 public class Cesar {
 	
+	/**
+	 * Método que muestra por pantalla el número al que equivale cada uno de los caracteres de
+	 * la palabra que se le pasa como argumento.
+	 * @param cadena Palabra que hay que recorrer para obtener los caracteres que contiene.
+	 */
 	public void mostrarCodChars (String cadena)
 	{
 		int longitud = cadena.length();
@@ -16,6 +21,13 @@ public class Cesar {
 		}
 	}
 	
+	/**
+	 * Método que implementa el sistema de cifrado César, que consiste en reemplazar una letra por
+	 * otra que se encuentra en posición un número determinado de espacios más adelante en el alfabeto.
+	 * @param cadena Variable que representa la palabra que se quiere cifrar.
+	 * @param clave Número con el que se cifra.
+	 * @return Devuelve la cadena cifrada.
+	 */
 	public static String cifradoCesar (String cadena, int clave)
 	{
 		String cad_cifrada = new String();
@@ -33,6 +45,13 @@ public class Cesar {
 		return cad_cifrada;		
 	}
 	
+	/**
+	 * Método que transforma un carácter en otro que está situado un número de veces más adelante en el
+	 * alfabeto.
+	 * @param c Carácter a cifrar.
+	 * @param k Número clave.
+	 * @return Devuelve el carácter cifrado.
+	 */
 	public static char traduceCharCesar (char c, int k)
 	{
 		char char_traducido = 0;
