@@ -11,6 +11,12 @@ import java.util.Scanner;
  */
 public class JuegoAdivinarNumeros {
 	
+	public static int generarAleatorio()
+	{
+		int num_aleatorio = (int) (100 * Math.random()+1);
+		return num_aleatorio;
+	}
+	
 	public static int pedirNumero()
 	{
 		int numLeido = 0;
@@ -22,34 +28,40 @@ public class JuegoAdivinarNumeros {
 		return numLeido;
 	}
 	
+	public static void compararNumeros(int num_introducido, int num_aleatorio, int intentos)
+	{
+		String resultado = null;
+		if (num_introducido < num_aleatorio)
+		{
+			System.out.println("El número aleatorio es mayor. Te quedan " + (5-intentos) + " oportunidades");
+		}
+		else if (num_introducido > num_aleatorio)
+		{
+			System.out.println("El número aleatorio es menor. Te quedan " + (5-intentos) + " oportunidades");
+		}
+		else if (num_introducido == num_aleatorio)
+		{
+			System.out.println("Acertaste!!");
+		}
+	}
+	
 	public static void main(String[] args) {
 		
-		int x = (int) (100 * Math.random()+1);
+		int num_aleatorio = generarAleatorio(); 
 		int intentos = 0;
-		int numero_introducido = 0;
-		System.out.println("Se ha generado un número aleatorio entre 1 y 100. Adivina el número: ");
+		int num_introducido = 0;
+		System.out.println("Se ha generado un número aleatorio entre 1 y 100. Adivina el número (tienes 5 oportunidades): ");
 		
 		do
 		{
-			numero_introducido = pedirNumero();
+			num_introducido = pedirNumero();
 			intentos++;
-			if (numero_introducido < x)
-			{
-				System.out.println("El número aleatorio es mayor. Te quedan " + (5-intentos) + " oportunidades");
-			}
-			else if (numero_introducido > x)
-			{
-				System.out.println("El número aleatorio es menor. Te quedan " + (5-intentos) + " oportunidades");
-			}
-			else if (numero_introducido == x)
-			{
-				System.out.println("Acertaste!!");
-			}
+			compararNumeros(num_introducido, num_aleatorio, intentos);
 		}
-		while ((intentos < 5) && (numero_introducido != x));
+		while ((intentos < 5) && (num_introducido != num_aleatorio));
 		
-		if(numero_introducido != x)
-			System.out.println("Has perdido. El número era " + x);
+		if(num_introducido != num_aleatorio)
+			System.out.println("Has perdido. El número era " + num_aleatorio);
 	}
 
 }
