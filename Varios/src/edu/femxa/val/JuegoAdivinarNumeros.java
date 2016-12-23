@@ -74,7 +74,7 @@ public class JuegoAdivinarNumeros {
 			System.out.println("Acertaste!!");
 			break;
 		default:
-				break;
+			break;
 		
 		}
 	}
