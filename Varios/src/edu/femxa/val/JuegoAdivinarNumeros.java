@@ -11,12 +11,20 @@ import java.util.Scanner;
  */
 public class JuegoAdivinarNumeros {
 	
+	/**
+	 * Genera un número aleatorio.
+	 * @return El número aleatorio generado.
+	 */
 	public static int generarAleatorio()
 	{
 		int num_aleatorio = (int) (100 * Math.random()+1);
 		return num_aleatorio;
 	}
 	
+	/**
+	 * Lee un número entero que el usuario introduce por teclado.
+	 * @return El número introducido por teclado.
+	 */
 	public static int pedirNumero()
 	{
 		int numLeido = 0;
@@ -28,6 +36,13 @@ public class JuegoAdivinarNumeros {
 		return numLeido;
 	}
 	
+	/**
+	 * Compara el dos números, el que se ha introducido con el aleatorio, y muestra 
+	 * cual es mayor y el número de intentos que le quedan al usuario.
+	 * @param num_introducido Número que se lee desde teclado.
+	 * @param num_aleatorio Número que se genera aleatoriamente y es el que hay que adivinar.
+	 * @param intentos Número de veces que puedes intentar adivinar el número.
+	 */
 	public static void compararNumeros(int num_introducido, int num_aleatorio, int intentos)
 	{
 		String resultado = null;
