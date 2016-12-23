@@ -85,6 +85,7 @@ public class JuegoAdivinarNumeros {
 		int intentos = 0;
 		int num_introducido = 0;
 		String resultado = null;
+		
 		System.out.println("Se ha generado un número aleatorio entre 1 y 100. Adivina el número (tienes 5 oportunidades): ");
 		
 		do
