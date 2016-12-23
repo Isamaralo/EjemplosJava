@@ -47,11 +47,11 @@ public class JuegoAdivinarNumeros {
 		String resultado = null;
 		
 		if (num_introducido < num_aleatorio)
-			resultado = "menor"; 
+				resultado = "menor"; 
 			else if (num_introducido > num_aleatorio)
 					resultado = "mayor";
 				else if (num_introducido == num_aleatorio)
-					resultado = "igual";
+						resultado = "igual";
 		
 		return resultado;
 	}
