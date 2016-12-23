@@ -47,9 +47,9 @@ public class JuegoAdivinarNumeros {
 		String resultado = null;
 		
 		if (num_introducido < num_aleatorio)
-			resultado = "mayor"; 
+			resultado = "menor"; 
 			else if (num_introducido > num_aleatorio)
-					resultado = "menor";
+					resultado = "mayor";
 				else if (num_introducido == num_aleatorio)
 					resultado = "igual";
 		
@@ -65,10 +65,10 @@ public class JuegoAdivinarNumeros {
 	{
 		switch (resultado){
 		case "mayor": 
-			System.out.println("El número aleatorio es mayor. Te quedan " + (5-intentos) + " oportunidades");
+			System.out.println("El número introducido es mayor. Te quedan " + (5-intentos) + " oportunidades");
 			break;
 		case "menor":
-			System.out.println("El número aleatorio es menor. Te quedan " + (5-intentos) + " oportunidades");
+			System.out.println("El número introducido es menor. Te quedan " + (5-intentos) + " oportunidades");
 			break;
 		case "igual":
 			System.out.println("Acertaste!!");
