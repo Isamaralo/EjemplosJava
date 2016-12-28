@@ -58,7 +58,7 @@ public class OrdenarArrays {
         
         //Ordeno el array
         ordenBurbuja(a_ent_a);
-                
+        
         //Muestro array ordenado
         for (int i = 0; i < a_ent_a.length; i++) {
             System.out.println("Num en pos " + (i+1) + " " + a_ent_a[i]);
