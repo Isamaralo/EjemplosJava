@@ -63,6 +63,7 @@ public class OrdenarArrays {
         for (int i = 0; i < a_ent_a.length; i++) {
             System.out.println("Num en pos " + (i+1) + " " + a_ent_a[i]);
         }
+        
     }
 
 }
