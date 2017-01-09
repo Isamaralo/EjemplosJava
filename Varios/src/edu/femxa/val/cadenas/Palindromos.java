@@ -30,10 +30,12 @@ public class Palindromos {
 		boolean b_dev = false;
 		int longitud = cadena.length();
 		
-			for (int i = 0; i < longitud-1; i++) {
-				
+			int i = 0;
+			while(i<cadena.length())
+			{
 				if(cadena.charAt(i) == cadena.charAt(longitud-1-i))
 					b_dev = true;
+				i++;
 			}
 		
 		return b_dev;
