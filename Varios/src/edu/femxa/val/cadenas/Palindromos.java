@@ -21,7 +21,7 @@ public class Palindromos {
 	}
 
 	/**
-	 * Recibe una cadena y devuelve si la cadena es un palíndromo
+	 * Recibe una cadena y devuelve si la cadena es un palíndromo.
 	 * @param cadena Cadena que recibe
 	 * @return True si es un palíndromo y false si no lo es
 	 */
