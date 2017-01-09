@@ -31,7 +31,11 @@ public class Palindromos {
 		int longitud = cadena.length();
 		
 			for (int i = 0; i < longitud; i++) {
-				if(cadena.charAt(i) == cadena.charAt(longitud-1-i))
+				if(cadena.charAt(i) == ' ')
+					if(cadena.charAt(i) == cadena.charAt(longitud-1-i))
+						b_dev = true;
+				else
+					if(cadena.charAt(i) == cadena.charAt(longitud-1-i))
 					b_dev = true;
 			}
 		
