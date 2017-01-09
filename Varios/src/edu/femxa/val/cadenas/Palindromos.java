@@ -27,13 +27,16 @@ public class Palindromos {
 	 */
 	public static boolean esPalindromo (String cadena)
 	{
-		boolean b_dev = false;
+		boolean b_dev = true;
 		int longitud = cadena.length();
 		
 			int i = 0;
-			while((i<cadena.length()) && (cadena.charAt(i) == cadena.charAt(longitud-1-i)))
+			while(i<cadena.length() && b_dev)
 			{
-				b_dev = true;
+				if(cadena.charAt(i) == cadena.charAt(longitud-1-i))
+					b_dev = true;
+				else
+					b_dev = false;
 				i++;
 			}
 		
