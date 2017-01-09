@@ -3,21 +3,6 @@ package edu.femxa.val.practicaNavidad;
 import java.util.Scanner;
 
 public class EntradaSalida {
-
-	/**
-	 * Pide un número de tipo entero al usuario 
-	 * @return El número que el usuario introduce por teclado
-	 */
-	public static int pedirOpcion ()
-	{
-		int opcion = 0;
-		Scanner sc = null;
-		
-			sc = new Scanner(System.in);
-			opcion = sc.nextInt();
-			
-		return opcion;
-	}
 	
 	/**
 	 * Muestra el menú con las opciones del programa
@@ -32,6 +17,21 @@ public class EntradaSalida {
 		System.out.println("5. ORDENAR POR EDAD");
 		System.out.println("6. INSERTAR ORDENADO");
 		System.out.println("7. SALIR");
+	}
+	
+	/**
+	 * Pide un número de tipo entero al usuario 
+	 * @return El número que el usuario introduce por teclado
+	 */
+	public static int pedirOpcion ()
+	{
+		int opcion = 0;
+		Scanner sc = null;
+		
+			sc = new Scanner(System.in);
+			opcion = sc.nextInt();
+			
+		return opcion;
 	}
 	
 	/**
