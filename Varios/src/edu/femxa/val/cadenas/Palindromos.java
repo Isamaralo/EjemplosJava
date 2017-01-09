@@ -42,6 +42,6 @@ public class Palindromos {
 		if (esPalindromo(cadena))
 			System.out.println("La cadena \"" +cadena+ "\" es un palíndromo.");
 		else
-			System.out.println("La cadena " +cadena+ " NO es un palíndromo.");
+			System.out.println("La cadena \"" +cadena+ "\" NO es un palíndromo.");
 	}
 }
