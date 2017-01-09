@@ -1,5 +1,7 @@
 package edu.femxa.val.practicaNavidad;
 
+import org.omg.Messaging.SyncScopeHelper;
+
 public class Persona {
 
 	private int edad;
@@ -31,6 +33,16 @@ public class Persona {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String res = null;
+		
+			res = "Nombre: " +this.getNombre() + "   Edad: " +this.getEdad();
+		
+		return res;
 	}
 	
 	
