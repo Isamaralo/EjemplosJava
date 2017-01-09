@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Palindromos {
 	
+	/**
+	 * Pide al usuario que introduzca una cadena por teclado.
+	 * @return La cadena que ha introducido el usuario
+	 */
 	public static String pedirCadena()
 	{
 		String cadena = null;
