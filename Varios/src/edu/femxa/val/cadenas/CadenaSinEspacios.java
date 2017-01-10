@@ -22,11 +22,12 @@ public class CadenaSinEspacios {
 	
 	public static String quitarEspacios (String cadena)
 	{
-		String cadena_sin_espacios = null;
+		String cadena_sin_espacios = "";
 		
 			for (int i = 0; i < cadena.length(); i++) {
 				
-				cadena_sin_espacios += cadena;
+				if(cadena.charAt(i) != ' ')
+					cadena_sin_espacios += cadena.charAt(i);
 			}
 		
 		return cadena_sin_espacios;
@@ -35,7 +36,7 @@ public class CadenaSinEspacios {
 	public static void main(String[] args) {
 		
 		String cadena = null;
-		String cadena_sin_espacios = "";
+		String cadena_sin_espacios = null;
 		
 		cadena = pedirCadena();
 		cadena_sin_espacios = quitarEspacios(cadena);
