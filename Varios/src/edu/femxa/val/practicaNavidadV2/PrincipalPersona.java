@@ -72,7 +72,11 @@ public class PrincipalPersona {
 				
 				break;
 			case 5:
-				array_personas.ordenarPersonasPorEdad();
+				if(array_personas.getNum_personas() == 0)
+					System.out.println("La lista está vacía.\n");
+				
+				else
+					array_personas.ordenarPersonasPorEdad();
 				break;
 			case 6:
 //				if(contador < array_personas.num_personas)
