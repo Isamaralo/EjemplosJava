@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class EntradaSalida {
 	
 	/**
-	 * Muestra el menú con las opciones del programa
+	 * Muestra el menÃº con las opciones del programa
 	 */
 	public static void mostrarMenu ()
 	{
-		System.out.println("Elija una opción: ");
+		System.out.println("Elija una opciÃ³n: ");
 		System.out.println("1. INSERTAR PERSONA");
 		System.out.println("2. LISTAR PERSONAS");
 		System.out.println("3. BUSCAR PERSONA POR NOMBRE");
@@ -20,8 +20,8 @@ public class EntradaSalida {
 	}
 	
 	/**
-	 * Pide un número de tipo entero al usuario 
-	 * @return El número que el usuario introduce por teclado
+	 * Pide un nÃºmero de tipo entero al usuario 
+	 * @return El nÃºmero que el usuario introduce por teclado
 	 */
 	public static int pedirOpcion ()
 	{
@@ -52,7 +52,7 @@ public class EntradaSalida {
 	
 	/**
 	 * Pide una edad al usuario
-	 * @return El número entero que el usuario introduce por teclado
+	 * @return El nÃºmero entero que el usuario introduce por teclado
 	 */
 	public static int pedirEdad ()
 	{

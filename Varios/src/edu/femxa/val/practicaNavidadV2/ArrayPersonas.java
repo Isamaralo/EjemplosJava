@@ -16,10 +16,10 @@ public class ArrayPersonas {
 	}
 	
 	/**
-	 * Inserta una persona en la primera posición
-	 * vacía de la lista.
+	 * Inserta una persona en la primera posiciï¿½n
+	 * vacï¿½a de la lista.
 	 * @param persona Objeto de tipo Persona a insertar
-	 * @return True si se ha insertado y false si la lista está llena
+	 * @return True si se ha insertado y false si la lista estï¿½ llena
 	 */
 	public boolean insertarPersona (Persona persona)
 	{
@@ -42,7 +42,7 @@ public class ArrayPersonas {
 	public void listarPersonas ()
 	{
 		if(this.num_personas == 0)
-			System.out.println("La lista está vacía.\n");
+			System.out.println("La lista estï¿½ vacï¿½a.\n");
 		else
 		{
 			for (int i = 0; i < this.num_personas; i++) {
@@ -80,6 +80,32 @@ public class ArrayPersonas {
 	}
 	
 	/**
+	 * MÃ©todo que busca en la lista una persona cuyo nombre
+	 * coincida con el que se le pasa y devuelva la posiciÃ³n 
+	 * de esa persona.
+	 * @param nombre Nombre de la persona a buscar
+	 * @return La posiciÃ³n en la que se encuentra la persona y -1 si no hay ninguna persona con ese nombre
+	 */
+	public int buscarPersonaPos (String nombre)
+	{
+		int pos = -1;
+		boolean encontrada = false;
+			
+			int i = 0;
+			while (i<this.num_personas && !encontrada)
+			{
+				if (this.array_personas[i].getNombre().equals(nombre))
+				{
+					pos = i;
+					encontrada = true;
+				}
+				i++;
+			}
+		
+		return pos;
+	}
+	
+	/**
 	 * Borra los datos de la primera persona cuyo nombre coincida
 	 * con el que se le pasa.
 	 * @param nombre Nombre de la persona a borrar
@@ -111,7 +137,7 @@ public class ArrayPersonas {
 	{
 		Persona persona_aux = null;
 		if(this.num_personas == 0)
-			System.out.println("La lista está vacía.\n");
+			System.out.println("La lista estï¿½ vacï¿½a.\n");
 		else
 		{
 	        for (int i = 0; i < this.num_personas; i++)

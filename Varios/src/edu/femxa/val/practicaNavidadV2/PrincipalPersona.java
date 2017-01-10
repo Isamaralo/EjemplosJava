@@ -32,7 +32,7 @@ public class PrincipalPersona {
 				if(array_personas.insertarPersona(persona))
 					System.out.println("Ha introducido una nueva persona en la lista.\n");
 				else
-					System.out.println("La lista est· llena.\n");
+					System.out.println("La lista est√° llena.\n");
 				
 				break;
 			case 2:
@@ -40,7 +40,7 @@ public class PrincipalPersona {
 				break;
 			case 3:		
 				if(array_personas.num_personas == 0)
-					System.out.println("La lista est· vacÌa.\n");
+					System.out.println("La lista est√° vac√≠a.\n");
 				else
 				{
 					nombre = EntradaSalida.pedirNombre();
@@ -53,7 +53,7 @@ public class PrincipalPersona {
 				break;
 			case 4:
 				if(array_personas.num_personas==0)
-					System.out.println("La lista est· vacÌa.\n");
+					System.out.println("La lista est√° vac√≠a.\n");
 				else
 				{
 					nombre = EntradaSalida.pedirNombre();
@@ -74,11 +74,11 @@ public class PrincipalPersona {
 					edad = EntradaSalida.pedirEdad();
 					persona = new Persona(nombre, edad);
 				
-					//ArrayPersonas1.insertarPersonasOrdenadas(array_personas, persona);
+					//ArrayPersonas.insertarPersonasOrdenadas(array_personas, persona);
 					contador++;
 				}
 				else
-					System.out.println("La lista est· llena.\n");
+					System.out.println("La lista est√° llena.\n");
 				break;
 			default:
 				break;
@@ -86,6 +86,6 @@ public class PrincipalPersona {
 			
 		}
 		while(opcion!=7);
-		System.out.println("Est· saliendo del programa.");
+		System.out.println("Est√° saliendo del programa.");
 	}
 }
