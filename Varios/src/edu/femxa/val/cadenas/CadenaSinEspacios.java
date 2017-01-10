@@ -20,6 +20,11 @@ public class CadenaSinEspacios {
 		return cadena;
 	}
 	
+	/**
+	 * Recibe una cadena y devuelve la cadena sin espacios en blanco
+	 * @param cadena Cadena que recibe
+	 * @return Cadena sin espacios
+	 */
 	public static String quitarEspacios (String cadena)
 	{
 		String cadena_sin_espacios = "";
