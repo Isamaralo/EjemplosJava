@@ -7,7 +7,23 @@ public class ArrayPersonas {
 	public static final int TAMANIO_LISTA = 5;
 	
 	private Persona[] array_personas;
-	public int num_personas;
+	private int num_personas;
+	
+	public Persona[] getArray_personas() {
+		return array_personas;
+	}
+
+	public void setArray_personas(Persona[] array_personas) {
+		this.array_personas = array_personas;
+	}
+
+	public int getNum_personas() {
+		return num_personas;
+	}
+
+	public void setNum_personas(int num_personas) {
+		this.num_personas = num_personas;
+	}
 	
 	public ArrayPersonas ()
 	{
@@ -16,10 +32,10 @@ public class ArrayPersonas {
 	}
 	
 	/**
-	 * Inserta una persona en la primera posici�n
-	 * vac�a de la lista.
+	 * Inserta una persona en la primera posición
+	 * vacía de la lista.
 	 * @param persona Objeto de tipo Persona a insertar
-	 * @return True si se ha insertado y false si la lista est� llena
+	 * @return True si se ha insertado y false si la lista está llena
 	 */
 	public boolean insertarPersona (Persona persona)
 	{
@@ -42,7 +58,7 @@ public class ArrayPersonas {
 	public void listarPersonas ()
 	{
 		if(this.num_personas == 0)
-			System.out.println("La lista est� vac�a.\n");
+			System.out.println("La lista está vacía.\n");
 		else
 		{
 			for (int i = 0; i < this.num_personas; i++) {
@@ -62,7 +78,6 @@ public class ArrayPersonas {
 	public Persona buscarPersonaPorNombre (String nombre)
 	{
 		Persona persona = null;
-		persona = new Persona();
 		boolean encontrada = false;
 			
 			int i = 0;
@@ -80,13 +95,13 @@ public class ArrayPersonas {
 	}
 	
 	/**
-	 * Método que busca en la lista una persona cuyo nombre
-	 * coincida con el que se le pasa y devuelva la posición 
-	 * de esa persona.
+	 * Método que busca en la lista la primera persona cuyo nombre
+	 * coincida con el que se le pasa y devuelve la posición de esa
+	 * persona.
 	 * @param nombre Nombre de la persona a buscar
 	 * @return La posición en la que se encuentra la persona y -1 si no hay ninguna persona con ese nombre
 	 */
-	public int buscarPersonaPos (String nombre)
+	public int buscarPersonaPorNombrePos (String nombre)
 	{
 		int pos = -1;
 		boolean encontrada = false;
@@ -103,6 +118,21 @@ public class ArrayPersonas {
 			}
 		
 		return pos;
+	}
+
+	/**
+	 * Método que devuelve la persona que está en la posición
+	 * que le pasas.
+	 * @param pos Posición de la persona que quiero obtener
+	 * @return Persona que está en la posición pos
+	 */
+	public Persona obtenerPersona (int pos)
+	{
+		Persona persona = null;
+		
+			persona = this.array_personas[pos];
+			
+		return persona;
 	}
 	
 	/**
@@ -137,7 +167,7 @@ public class ArrayPersonas {
 	{
 		Persona persona_aux = null;
 		if(this.num_personas == 0)
-			System.out.println("La lista est� vac�a.\n");
+			System.out.println("La lista está vacía.\n");
 		else
 		{
 	        for (int i = 0; i < this.num_personas; i++)

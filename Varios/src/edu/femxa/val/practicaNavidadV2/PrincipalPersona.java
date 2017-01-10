@@ -11,7 +11,7 @@ public class PrincipalPersona {
 		int opcion = 0;
 		ArrayPersonas array_personas = null;
 		array_personas = new ArrayPersonas();
-		int contador = 0;
+		int pos = 0;
 		
 		String nombre = null;
 		int edad = 0;
@@ -39,12 +39,14 @@ public class PrincipalPersona {
 				array_personas.listarPersonas();
 				break;
 			case 3:		
-				if(array_personas.num_personas == 0)
+				if(array_personas.getNum_personas() == 0)
 					System.out.println("La lista está vacía.\n");
 				else
 				{
 					nombre = EntradaSalida.pedirNombre();
-					persona = array_personas.buscarPersonaPorNombre(nombre);
+					//persona = array_personas.buscarPersonaPorNombre(nombre);
+					pos = array_personas.buscarPersonaPorNombrePos(nombre);
+					persona = array_personas.obtenerPersona(pos);
 					if(persona != null)
 						System.out.println(persona.toString()+"\n");
 					else
@@ -52,13 +54,13 @@ public class PrincipalPersona {
 				}
 				break;
 			case 4:
-				if(array_personas.num_personas==0)
+				if(array_personas.getNum_personas() == 0)
 					System.out.println("La lista está vacía.\n");
 				else
 				{
 					nombre = EntradaSalida.pedirNombre();
 					if(array_personas.borrarPersona(nombre))
-						System.out.println(nombre +" ha sido borrada de la lista.\n");
+						System.out.println("La persona de nombre " +nombre +" ha sido borrada de la lista.\n");
 					else
 						System.out.println("No se ha encontrado ninguna persona en la lista de nombre " +nombre+ ".\n");
 				}
@@ -68,18 +70,18 @@ public class PrincipalPersona {
 				array_personas.ordenarPersonasPorEdad();
 				break;
 			case 6:
-				if(contador < array_personas.num_personas)
-				{
-					nombre = EntradaSalida.pedirNombre();
-					edad = EntradaSalida.pedirEdad();
-					persona = new Persona(nombre, edad);
-				
-					//ArrayPersonas.insertarPersonasOrdenadas(array_personas, persona);
-					contador++;
-				}
-				else
-					System.out.println("La lista está llena.\n");
-				break;
+//				if(contador < array_personas.num_personas)
+//				{
+//					nombre = EntradaSalida.pedirNombre();
+//					edad = EntradaSalida.pedirEdad();
+//					persona = new Persona(nombre, edad);
+//				
+//					//ArrayPersonas.insertarPersonasOrdenadas(array_personas, persona);
+//					contador++;
+//				}
+//				else
+//					System.out.println("La lista está llena.\n");
+//				break;
 			default:
 				break;
 			}
