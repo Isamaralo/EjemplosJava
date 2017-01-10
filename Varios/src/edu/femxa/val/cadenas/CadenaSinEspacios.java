@@ -21,7 +21,7 @@ public class CadenaSinEspacios {
 	}
 	
 	/**
-	 * Recibe una cadena y devuelve la cadena sin espacios en blanco
+	 * Recibe una cadena y devuelve la cadena sin espacios en blanco.
 	 * @param cadena Cadena que recibe
 	 * @return Cadena sin espacios
 	 */
