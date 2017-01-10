@@ -2,12 +2,12 @@ package edu.femxa.val;
 
 public class Persona {
 	
-	//secci髇 atributos
+	//secci贸n atributos
 	private String nombre;
 	private int edad;
-	//fin secci髇 atributos
+	//fin secci贸n atributos
 	
-	//secci髇 m閠odos
+	//secci贸n m茅todos
 	public Persona()
 	{
 		
@@ -39,5 +39,17 @@ public class Persona {
 		System.out.println("Nombre = " +this.nombre);
 		System.out.println("Edad = " +this.edad);
 	}
-	//fin secci髇 m閠odos
+	
+	@Override
+	public boolean equals(Object obj) {
+		boolean son_iguales = false;
+		
+		Persona p1 = (Persona) obj;
+		
+			if((this.nombre == p1.nombre) && (this.edad == p1.edad))
+				son_iguales = true;
+		
+		return son_iguales;
+	}
+	//fin secci贸n m茅todos
 }

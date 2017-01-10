@@ -49,10 +49,7 @@ public class PrincipalPersona {
 					if (pos >= 0)
 					{
 						persona = array_personas.obtenerPersona(pos);
-						if(persona != null)
-							System.out.println(persona.toString()+"\n");
-						else
-							System.out.println("No se ha encontrado ninguna persona en la lista de nombre " +nombre+ ".\n");
+						System.out.println(persona.toString()+"\n");
 					}
 					else
 						System.out.println("No se ha encontrado ninguna persona en la lista de nombre " +nombre+ ".\n");
