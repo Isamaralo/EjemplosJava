@@ -50,7 +50,7 @@ public class EsPalindromoVRecursiva {
 		int i = 0;
 		int j = cad.length()-1;
 		
-			while((i<=j) && (cad.length()!=0 && cad.length()!=1))
+			if((i<=j) && (cad.length()!=0 && cad.length()!=1))
 			{
 				bd = cad.charAt(i) == cad.charAt(j);
 				if(bd)
@@ -64,7 +64,7 @@ public class EsPalindromoVRecursiva {
 	}
 	
 	public static void main(String[] args) {
-		if (esPalindromoVersionRecursiva("dabale arroz a la zorra el abad"))
+		if (esPalindromoVersionRecursiva("dhola"))
 		{
 			System.out.println("VERDADERO");
 		} else 
