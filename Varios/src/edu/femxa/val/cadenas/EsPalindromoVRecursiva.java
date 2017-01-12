@@ -64,7 +64,7 @@ public class EsPalindromoVRecursiva {
 	}
 	
 	public static void main(String[] args) {
-		if (esPalindromoVersionRecursiva("dhola"))
+		if (esPalindromoVersionRecursiva("dabale arroz a la zorra el abad"))
 		{
 			System.out.println("VERDADERO");
 		} else 
