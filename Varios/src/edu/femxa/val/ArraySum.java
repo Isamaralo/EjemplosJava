@@ -2,7 +2,7 @@ package edu.femxa.val;
 
 public class ArraySum {
     
-    private static int[] array_notas = {0, 10, 2, 6, 7, 5, 4};
+    private int[] array_notas = {0, 10, 2, 6, 7, 5, 4};
     
     public static void main(String[] args) {
         /**
@@ -17,13 +17,14 @@ public class ArraySum {
         int suma = 0;
         float f_suma = 0;
         float media = 0;
+        ArraySum as = new ArraySum();
         
-        for (int i = 0; i < array_notas.length; i++) {
-            suma += array_notas[i];
+        for (int i = 0; i < as.array_notas.length; i++) {
+            suma += as.array_notas[i];
         }
         
         f_suma = (float) suma;
-        media = f_suma / array_notas.length;
+        media = f_suma / as.array_notas.length;
         System.out.println("La nota media es: " +media);
     }
 
