@@ -10,11 +10,9 @@ public class BaseDatos {
 	
 	public static void mostrarLista (ArrayList<Empleado> lista_empleados)
 	{
-		int i = 0;
 		for (Empleado empleado : lista_empleados) 
 		{
 			System.out.println(empleado.getId() +"\0" +empleado.getNombre() +"\t" +empleado.getSalario() +"\t" +empleado.getDpto() +"\t" +empleado.getNombre_dpto());
-			i++;
 		}
 	}
 	
