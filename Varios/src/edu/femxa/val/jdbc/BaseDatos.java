@@ -43,7 +43,7 @@ public class BaseDatos {
 			conn = DriverManager.getConnection ("jdbc:oracle:thin:@localhost:1521:xe", "HR", "password"); //es la cadena de conexión
   	        stmt = conn.createStatement(); //Creo una instrucción a partir de la conexión
 			//rset = stmt.executeQuery("SELECT * from EMPLOYEES ORDER BY SALARY DESC"); //rset es como una lista
-  	        rset = stmt.executeQuery("SELECT E.EMPLOYEE_ID, E.FIRST_NAME, E.SALARY, E.DEPARTMENT_ID, D.DEPARTMENT_NAME FROM DEPARTMENTS D, EMPLOYEES E WHERE D.DEPARTMENT_ID=E.DEPARTMENT_ID ORDER BY E.SALARY DESC");
+  	        rset = stmt.executeQuery(Consultas.CONSULTA_EMPLEADOS_SALARIO_DESCENDENTE);
   	        while (rset.next()) 
 			{	
 //			         System.out.println (rset.getString(1));  //Obtengo el campo 1, que en la tabla EMPLOYEES es el id
