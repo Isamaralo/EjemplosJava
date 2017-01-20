@@ -18,11 +18,15 @@ public class BaseDatos {
 	
 	public static void main(String[] args) throws Exception {
 		
-		
 		Connection conn = null; //Conexión
 		ResultSet rset = null; //Conjunto de datos recuperados de la BD
 		Statement stmt = null; //Instrucción
 		ArrayList<Empleado> lista_empleados = null;
+		Integer id = 0;
+		String nombre = null;
+		Integer salario = 0;
+		Integer depto = 0;
+		String nombre_depto = null;
 		
 		lista_empleados = new ArrayList<Empleado>();
 		
@@ -44,11 +48,11 @@ public class BaseDatos {
 			{	
 //			         System.out.println (rset.getString(1));  //Obtengo el campo 1, que en la tabla EMPLOYEES es el id
 //			   		 System.out.println(rset.getString(2));  //Obtengo el campo 2, que es el nombre
-		   		 	 Integer id = rset.getInt(1);
-			   		 String nombre = rset.getString("FIRST_NAME");
-			   		 Integer salario = rset.getInt("SALARY");
-			   		 Integer depto = rset.getInt("DEPARTMENT_ID");
-			   		 String nombre_depto= rset.getString(5);
+		   		 	 id = rset.getInt(1);
+			   		 nombre = rset.getString("FIRST_NAME");
+			   		 salario = rset.getInt("SALARY");
+			   		 depto = rset.getInt("DEPARTMENT_ID");
+			   		 nombre_depto= rset.getString(5);
 			   		 
 			   		 lista_empleados.add(new Empleado(id, nombre, salario, depto, nombre_depto));
 			}
