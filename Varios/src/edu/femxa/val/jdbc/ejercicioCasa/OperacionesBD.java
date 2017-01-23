@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import edu.femxa.val.jdbc.BaseDatos;
 import edu.femxa.val.jdbc.Consultas;
 import edu.femxa.val.jdbc.Empleado;
 
