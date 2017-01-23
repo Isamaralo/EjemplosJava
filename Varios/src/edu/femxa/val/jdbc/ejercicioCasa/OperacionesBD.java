@@ -143,7 +143,7 @@ public class OperacionesBD {
 			{
 				e.printStackTrace();
 			}
-			finally //libero recursos, de "adentro a fuera" , ResultSet, Statment, Conexion
+			finally 
 			{
 				if (rset != null) 	{ try { rset.close(); } catch (Exception e2) { e2.printStackTrace(); }}
 				if (stmt2 != null)	{ try {	stmt2.close(); } catch (Exception e2) { e2.printStackTrace(); }}
