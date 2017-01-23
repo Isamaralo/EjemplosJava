@@ -1,6 +1,6 @@
 package edu.femxa.val.jdbc.ejercicioCasa;
 
-public class MenuBaseDeDatos {
+public class PrincipalBaseDeDatos {
 	
 	public static void main(String[] args) {
 		
