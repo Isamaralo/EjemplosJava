@@ -1,6 +1,18 @@
 package edu.femxa.val.jdbc.ejercicioCasa;
 
+import java.util.ArrayList;
+
+import edu.femxa.val.jdbc.Empleado;
+
 public class PrincipalBaseDeDatos {
+	
+	public static void mostrarLista (ArrayList<Empleado> lista_empleados)
+	{
+		for (Empleado empleado : lista_empleados) 
+		{
+			System.out.println(empleado.getId() +"\0" +empleado.getNombre() +"\t" +empleado.getSalario() +"\t" +empleado.getDpto() +"\t" +empleado.getNombre_dpto());
+		}
+	}
 	
 	public static void main(String[] args) {
 		
@@ -11,6 +23,9 @@ public class PrincipalBaseDeDatos {
 		String email = null;
 		String fecha_inicio = null;
 		String id_job = null;
+		ArrayList<Empleado> lista_empleados = null;
+
+		lista_empleados = new ArrayList<Empleado>();
 		
 		do
 		{
@@ -58,6 +73,15 @@ public class PrincipalBaseDeDatos {
 						
 						break;
 					
+					case 3:
+						
+						if(OperacionesBD.aumentaSalarioAdministracion())
+							System.out.println("Salario de los empleados de administración actualizado correctamente.\n");
+						else
+							System.out.println("Error al aumentar el salario a los empleados de administración.\n");
+							
+						break;
+						
 					default:
 						break;
 				}
@@ -65,7 +89,7 @@ public class PrincipalBaseDeDatos {
 				System.out.println("Ha introducido un caracter incorrecto.\n");
 			}			
 		}
-		while(opcion!=3);
+		while(opcion!=4);
 
 	}
 

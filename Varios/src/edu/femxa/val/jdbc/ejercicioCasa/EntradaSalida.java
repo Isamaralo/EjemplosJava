@@ -13,7 +13,8 @@ public class EntradaSalida {
 		System.out.println("Elija una opción: ");
 		System.out.println("1. DAR DE ALTA A UN EMPLEADO");
 		System.out.println("2. DAR DE BAJA A UN EMPLEADO");
-		System.out.println("3. SALIR");
+		System.out.println("3. AUMENTAR 20% SALARIO DE ADMINISTRACIÓN");
+		System.out.println("4. SALIR");
 	}
 	
 	/**

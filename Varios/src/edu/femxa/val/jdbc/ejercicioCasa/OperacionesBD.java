@@ -2,7 +2,13 @@ package edu.femxa.val.jdbc.ejercicioCasa;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+
+import edu.femxa.val.jdbc.BaseDatos;
+import edu.femxa.val.jdbc.Consultas;
+import edu.femxa.val.jdbc.Empleado;
 
 public class OperacionesBD {
 	
@@ -32,7 +38,7 @@ public class OperacionesBD {
   	        i_res = stmt.executeUpdate(alta_empleado);
   	        if(i_res > 0)
   	        {
-  	        	System.out.println("\n"+i_res +" fila/s insertadas.");
+  	        	System.out.println("\n"+i_res +" fila/s insertada/s.");
   	        	alta_realizada = true;  	        	
   	        }
 		}
@@ -71,7 +77,7 @@ public class OperacionesBD {
   	        i_res = stmt.executeUpdate(baja_empleado);
   	        if(i_res > 0)
   	        {
-  	        	System.out.println("\n"+i_res +" fila/s eliminadas.");
+  	        	System.out.println("\n"+i_res +" fila/s eliminada/s.");
   	        	eliminado = true;
   	        }
 			
@@ -88,6 +94,64 @@ public class OperacionesBD {
 		}   
 
 		return eliminado;
+	}
+	
+	/**
+	 * Método que aumenta el salario de los empleados que trabajan 
+	 * en el departamento de Administración.
+	 * @return True si se ha actualizado alguna fila y false si no
+	 */
+	public static boolean aumentaSalarioAdministracion ()
+	{
+		ArrayList<Empleado> lista_empleados = null;
+		Connection conn = null;
+		ResultSet rset = null;
+		Statement stmt = null;
+		Statement stmt2 = null;
+		Integer id = 0;
+		String nombre = null;
+		Integer salario = 0;
+		int depto = 0;
+		String nombre_depto = null;
+		String aumentar_Salario = null;
+		boolean i_res = false;
+		
+			lista_empleados = new ArrayList<Empleado>();
+			try
+			{
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+				conn = DriverManager.getConnection ("jdbc:oracle:thin:@localhost:1521:xe", "HR", "password"); 
+	  	        stmt = conn.createStatement(); 
+	  	        rset = stmt.executeQuery(Consultas.CONSULTA_EMPLEADOS_ADMINISTRACION);
+	  	        while (rset.next()) 
+				{	
+			   		 	 id = rset.getInt(1);
+				   		 nombre = rset.getString("FIRST_NAME");
+				   		 salario = rset.getInt("SALARY");
+				   		 depto = rset.getInt("DEPARTMENT_ID");
+				   		 nombre_depto= rset.getString(5);
+				   		 
+				   		 lista_empleados.add(new Empleado(id, nombre, salario, depto, nombre_depto));
+				}
+	  	        aumentar_Salario = "UPDATE EMPLOYEES SET SALARY = SALARY + (SALARY*0.2) WHERE DEPARTMENT_ID = "+depto;
+	  	        if (stmt != null)	{ try {	stmt.close(); } catch (Exception e2) { e2.printStackTrace(); }}
+	  	        stmt2 = conn.createStatement();
+	  	        i_res = stmt2.execute(aumentar_Salario);
+				
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+			finally //libero recursos, de "adentro a fuera" , ResultSet, Statment, Conexion
+			{
+				if (rset != null) 	{ try { rset.close(); } catch (Exception e2) { e2.printStackTrace(); }}
+				if (stmt2 != null)	{ try {	stmt2.close(); } catch (Exception e2) { e2.printStackTrace(); }}
+				if (conn != null) 	{ try { conn.close(); } catch (Exception e3) { e3.printStackTrace(); }}
+			  	   
+			}   
+		
+		return i_res;
 	}
 
 }
