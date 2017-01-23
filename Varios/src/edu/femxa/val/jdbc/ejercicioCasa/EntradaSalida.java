@@ -6,19 +6,19 @@ import java.util.Scanner;
 public class EntradaSalida {
 	
 	/**
-	 * Muestra el men� con las opciones del programa
+	 * Muestra el menú con las opciones del programa
 	 */
 	public static void mostrarMenu ()
 	{
-		System.out.println("Elija una opci�n: ");
+		System.out.println("Elija una opción: ");
 		System.out.println("1. DAR DE ALTA A UN EMPLEADO");
 		System.out.println("2. DAR DE BAJA A UN EMPLEADO");
 		System.out.println("3. SALIR");
 	}
 	
 	/**
-	 * Pide un n�mero de tipo entero al usuario 
-	 * @return El n�mero que el usuario introduce por teclado
+	 * Pide un número de tipo entero al usuario 
+	 * @return El número que el usuario introduce por teclado
 	 */
 	public static int pedirEntero ()
 	{

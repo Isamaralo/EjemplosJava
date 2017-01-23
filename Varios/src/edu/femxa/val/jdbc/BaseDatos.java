@@ -40,7 +40,7 @@ public class BaseDatos {
 			Class.forName("oracle.jdbc.driver.OracleDriver"); //Una de las clases que están en el jar, a la que va a pedir conexión la clase DriverManager
 			//DriverManager.registerDriver (new oracle.jdbc.driver.OracleDriver());// método equivalente al anterior
 			//Sea como sea, es, <<oye, si te piden una conexión, se la pides a esa clase!>>
-			conn = DriverManager.getConnection ("jdbc:oracle:thin:@localhost:1521:xe", "HR", "password"); //es la cadena de conexión
+			conn = DriverManager.getConnection ("jdbc:oracle:thin:@169.254.233.110:1521:xe", "HR", "password"); //es la cadena de conexión
   	        stmt = conn.createStatement(); //Creo una instrucción a partir de la conexión
 			//rset = stmt.executeQuery("SELECT * from EMPLOYEES ORDER BY SALARY DESC"); //rset es como una lista
   	        rset = stmt.executeQuery(Consultas.CONSULTA_EMPLEADOS_SALARIO_DESCENDENTE);

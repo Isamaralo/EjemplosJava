@@ -7,7 +7,7 @@ import java.sql.Statement;
 public class OperacionesBD {
 	
 	/**
-	 * M�todo que permite dar de alta un nuevo empleado en la base de datos.
+	 * Método que permite dar de alta un nuevo empleado en la base de datos.
 	 * @param id Id del nuevo empleado
 	 * @param nombre Nombre del nuevo empleado
 	 * @param apellido Apellido del nuevo empleado
@@ -32,7 +32,7 @@ public class OperacionesBD {
   	        i_res = stmt.executeUpdate(alta_empleado);
   	        if(i_res > 0)
   	        {
-  	        	System.out.println(i_res +" fila/s insertadas.");
+  	        	System.out.println("\n"+i_res +" fila/s insertadas.");
   	        	alta_realizada = true;  	        	
   	        }
 		}
@@ -51,7 +51,7 @@ public class OperacionesBD {
 	}
 	
 	/**
-	 * M�todo que permite dar de baja a un empleado de la base de datos.
+	 * Método que permite dar de baja a un empleado de la base de datos.
 	 * @param id Id del empleado que hay que eliminar
 	 * @return True si se ha eliminado correctamente y false si no
 	 */
@@ -71,7 +71,7 @@ public class OperacionesBD {
   	        i_res = stmt.executeUpdate(baja_empleado);
   	        if(i_res > 0)
   	        {
-  	        	System.out.println(i_res +" fila/s eliminadas.");
+  	        	System.out.println("\n"+i_res +" fila/s eliminadas.");
   	        	eliminado = true;
   	        }
 			

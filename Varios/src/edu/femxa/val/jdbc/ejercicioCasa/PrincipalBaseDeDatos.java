@@ -36,7 +36,7 @@ public class PrincipalBaseDeDatos {
 						System.out.println("Introduzca la fecha en la que comienza a trabajar (dd/mm/yy): ");
 						fecha_inicio = EntradaSalida.pedirCadena();
 						
-						System.out.println("Introduzca el id del trabajo que desempe�a: ");
+						System.out.println("Introduzca el id del trabajo que desempeña: ");
 						id_job = EntradaSalida.pedirCadena();
 						
 						if(OperacionesBD.altaEmpleado(id, nombre, apellido, email, fecha_inicio, id_job))
