@@ -23,9 +23,7 @@ public class PrincipalBaseDeDatos {
 		String email = null;
 		String fecha_inicio = null;
 		String id_job = null;
-		ArrayList<Empleado> lista_empleados = null;
 
-		lista_empleados = new ArrayList<Empleado>();
 		
 		do
 		{
@@ -72,15 +70,6 @@ public class PrincipalBaseDeDatos {
 							System.out.println("Error al dar de baja empleado.\n");
 						
 						break;
-					
-					case 3:
-						
-						if(OperacionesBD.aumentaSalarioAdministracion())
-							System.out.println("Salario de los empleados de administración actualizado correctamente.\n");
-						else
-							System.out.println("Error al aumentar el salario a los empleados de administración.\n");
-							
-						break;
 						
 					default:
 						break;
@@ -89,7 +78,7 @@ public class PrincipalBaseDeDatos {
 				System.out.println("Ha introducido un caracter incorrecto.\n");
 			}			
 		}
-		while(opcion!=4);
+		while(opcion!=3);
 
 	}
 
