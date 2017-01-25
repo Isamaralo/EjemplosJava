@@ -32,7 +32,8 @@ public class IncrementoSalariosAdministracion {
 		
 			try
 			{
-				Class.forName("oracle.jdbc.driver.OracleDriver");
+				//Class.forName("oracle.jdbc.driver.OracleDriver");
+				DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 				conn = DriverManager.getConnection ("jdbc:oracle:thin:@localhost:1521:xe", "HR", "password"); 
 				conn.setAutoCommit(false);
 	  	        stmt = conn.createStatement(); 
