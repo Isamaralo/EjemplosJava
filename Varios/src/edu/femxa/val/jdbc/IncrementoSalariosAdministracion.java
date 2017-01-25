@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
 
 public class IncrementoSalariosAdministracion {
 	
@@ -15,6 +14,11 @@ public class IncrementoSalariosAdministracion {
 		Statement stmt = null;
 		String aumentar_Salario = null;
 		int i_res = 0;
+		
+		int id_empleado = 0;
+		int salario_anterior = 0;
+		int salario_posterior = 0;
+		String fecha = null;
 		
 			try
 			{
@@ -27,6 +31,16 @@ public class IncrementoSalariosAdministracion {
 					System.out.println(i_res +" fila/s actualizada/s.");
 				else
 					System.out.println("No se ha actualizado el salario de ningún empleado.");
+				
+				rset = stmt.executeQuery(Consultas.CONSULTA_HISTORICO_AUMENTOS_SALARIO);
+	  	        while (rset.next()) 
+				{	
+			   		 id_empleado = rset.getInt("EMPLOYEE_ID");
+				   	 salario_anterior = rset.getInt("SALARIO_ANTERIOR");
+				   	 salario_posterior = rset.getInt("SALARIO_POSTERIOR");
+				   	 fecha = rset.getString("FECHA");
+				}
+	  	        System.out.println("Id del empleado: "+id_empleado+" Salario antes: "+salario_anterior+" Salario después: "+salario_posterior+" Fecha: "+fecha);
 			}
 			catch(Exception e)
 			{
