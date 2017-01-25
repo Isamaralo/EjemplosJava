@@ -3,6 +3,7 @@ package edu.femxa.val.jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class IncrementoSalariosAdministracion {
@@ -31,6 +32,7 @@ public class IncrementoSalariosAdministracion {
 			{
 				Class.forName("oracle.jdbc.driver.OracleDriver");
 				conn = DriverManager.getConnection ("jdbc:oracle:thin:@localhost:1521:xe", "HR", "password"); 
+				conn.setAutoCommit(false);
 	  	        stmt = conn.createStatement(); 
 	  	        aumentar_Salario = "UPDATE EMPLOYEES SET SALARY = SALARY + (SALARY*0.2) WHERE DEPARTMENT_ID = 10";
 	  	        i_res = stmt.executeUpdate(aumentar_Salario);
@@ -52,6 +54,12 @@ public class IncrementoSalariosAdministracion {
 			catch(Exception e)
 			{
 				e.printStackTrace();
+				try {
+					conn.rollback();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 			finally 
 			{
