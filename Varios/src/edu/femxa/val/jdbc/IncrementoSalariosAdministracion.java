@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Savepoint;
 import java.sql.Statement;
 
 public class IncrementoSalariosAdministracion {
@@ -27,6 +28,7 @@ public class IncrementoSalariosAdministracion {
 		int salario_anterior = 0;
 		int salario_posterior = 0;
 		String fecha = null;
+		Savepoint sv = null;
 		
 			try
 			{
@@ -36,6 +38,7 @@ public class IncrementoSalariosAdministracion {
 	  	        stmt = conn.createStatement(); 
 	  	        aumentar_Salario = "UPDATE EMPLOYEES SET SALARY = SALARY + (SALARY*0.2) WHERE DEPARTMENT_ID = 10";
 	  	        i_res = stmt.executeUpdate(aumentar_Salario);
+	  	        sv = conn.setSavepoint();
 				if(i_res > 0)
 					System.out.println(i_res +" fila/s actualizada/s.");
 				else
@@ -50,12 +53,14 @@ public class IncrementoSalariosAdministracion {
 				   	 fecha = rset.getString("FECHA");
 			  	     System.out.println("Id del empleado: "+id_empleado+" Salario antes: "+salario_anterior+" Salario después: "+salario_posterior+" Fecha: "+fecha);
 				}
+	  	        conn.commit();
 			}
 			catch(Exception e)
 			{
 				e.printStackTrace();
 				try {
 					conn.rollback();
+					//conn.rollback(sv);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
