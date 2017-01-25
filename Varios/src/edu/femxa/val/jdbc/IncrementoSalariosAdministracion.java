@@ -6,6 +6,13 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class IncrementoSalariosAdministracion {
+
+	public static void liberarRecursos(ResultSet rset, Statement stmt, Connection conn) 
+	{
+		if (rset != null) 	{ try { rset.close(); } catch (Exception e2) { e2.printStackTrace(); }}
+	    if (stmt != null)	{ try {	stmt.close(); } catch (Exception e2) { e2.printStackTrace(); }}
+		if (conn != null) 	{ try { conn.close(); } catch (Exception e3) { e3.printStackTrace(); }}
+	}
 	
 	public static void main(String[] args) {
 		
@@ -39,8 +46,8 @@ public class IncrementoSalariosAdministracion {
 				   	 salario_anterior = rset.getInt("SALARIO_ANTERIOR");
 				   	 salario_posterior = rset.getInt("SALARIO_POSTERIOR");
 				   	 fecha = rset.getString("FECHA");
+			  	     System.out.println("Id del empleado: "+id_empleado+" Salario antes: "+salario_anterior+" Salario después: "+salario_posterior+" Fecha: "+fecha);
 				}
-	  	        System.out.println("Id del empleado: "+id_empleado+" Salario antes: "+salario_anterior+" Salario después: "+salario_posterior+" Fecha: "+fecha);
 			}
 			catch(Exception e)
 			{
@@ -48,9 +55,7 @@ public class IncrementoSalariosAdministracion {
 			}
 			finally 
 			{
-				if (rset != null) 	{ try { rset.close(); } catch (Exception e2) { e2.printStackTrace(); }}
-	  	        if (stmt != null)	{ try {	stmt.close(); } catch (Exception e2) { e2.printStackTrace(); }}
-				if (conn != null) 	{ try { conn.close(); } catch (Exception e3) { e3.printStackTrace(); }}
+				liberarRecursos(rset, stmt, conn);
 			} 
 	}
 
