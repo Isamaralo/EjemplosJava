@@ -38,7 +38,7 @@ public class IncrementoSalariosAdministracion {
 	  	        stmt = conn.createStatement(); 
 	  	        aumentar_Salario = "UPDATE EMPLOYEES SET SALARY = SALARY + (SALARY*0.2) WHERE DEPARTMENT_ID = 10";
 	  	        i_res = stmt.executeUpdate(aumentar_Salario);
-	  	        sv = conn.setSavepoint();
+	  	        //sv = conn.setSavepoint();
 				if(i_res > 0)
 					System.out.println(i_res +" fila/s actualizada/s.");
 				else
