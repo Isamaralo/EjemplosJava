@@ -26,6 +26,9 @@ public class Propiedades {
 		System.out.println(valor_user);
 		System.out.println(valor_password); 
 		
+		fichero_propiedades.setProperty("user", "Isabel"); //No lo escribe en el fichero
+		System.out.println(fichero_propiedades.getProperty("user")); 
+		
 		fr.close();
 	}
 }
